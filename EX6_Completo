@@ -1,0 +1,37 @@
+package DesafiosFOR;
+
+import java.util.Scanner;
+
+public class EX6 {
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int num = 0;
+		int par = 0;
+		int impar = 0;
+		
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("Digite um número " + "(" + i + ")");
+			num = ler.nextInt();
+			
+			if (num % 2 == 0) {
+				num = par;
+				par++;
+			}
+			else {
+				num = impar;
+				impar++;
+			}
+		}
+		
+		if (par > impar) {
+			System.out.println(par + " pares: " + "par ganhou");
+		}
+		else if (impar > par) {
+			System.out.println(impar + " impares: " + "impar ganhou");
+		}
+		else {
+			System.out.println(par + " pares " + "/ " + impar + " impares:" + " empate");
+		}
+		ler.close();
+	}
+}
